@@ -6,62 +6,15 @@ body {
 
 #head {
 	height: 40px;
-}
-
-#lang-bar {
-	height: 20px;
 	padding-top: 10px;
 }
 
+#lang-bar {
+	height: 40px;
+}
+
 #logo-bar {
-	height: 100px;
-}
-
-#nav-menu {
-	height: 52px;
-	background-color: #335075;	
-}
-
-#nav-menu .navbar-inner {
-	background-color: #000; /* background color will be black for all browsers */
-	background-image: none;
-	background-repeat: no-repeat;
-	filter: none;
-}
-
-#nav-menu .navbar {
-	-webkit-border-radius: 0 !important;
-	-moz-border-radius: 0 !important;
-	border-radius: 0 !important;
-	background-color: #335075;
-	border-color: #335075;
-}
-
-#nav-menu .navbar-default .navbar-nav > li:first-child {
-	border-left: 1px solid #FFF;
-}
-
-#nav-menu .navbar-default .navbar-nav > li {
-	border-right: 1px solid #FFF;
-}
-
-#nav-menu .navbar-default .navbar-nav > li .active,
-#nav-menu .navbar-default .navbar-nav > li > a:focus,
-#nav-menu .navbar-default .navbar-nav > li > a:hover {
-	color: #FFF;  /*Sets the text hover color on navbar*/
-	background-color: #243850;
-	font-weight: bold;
-	/*font-size: 110%;*/
-}
-
-#nav-menu .navbar-default .navbar-nav > li > a,
-#nav-menu .navbar-default .navbar-nav > li {
-	color: #FFF;
-	font-size: 17px; 
-}
-
-#nav-menu .container{
-	height: 52px;
+	height: 40px;
 }
 
 #breadcrumb {
