@@ -1,0 +1,8 @@
+           <div class="collapse navbar-collapse">
+	          <div class="nav navbar-nav">
+	          	<button type="button" class="btn btn-primary btn-sm">Post Ad</button>
+	          </div>
+	               			<div class="nav navbar-nav navbar-right">	
+     				Kitchener, ON
+        		</div>
+           </div>
