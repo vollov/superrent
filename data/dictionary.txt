@@ -1,0 +1,11 @@
+property
+pet - y|n (single)
+type - family,student,professional (list)
+university - list
+rooms - list
+
+
+university code
+WUW - University of Waterloo
+KCC - Conestoga College
+WWL - Wilfrid Laurier University 

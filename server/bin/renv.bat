@@ -1,0 +1,2 @@
+SET REDIS_HOME=D:\a0\redis\2.4.5\64bit
+SET PATH=%PATH%;%REDIS_HOME%

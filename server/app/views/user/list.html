@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3 class="panel-title">Users</h3>
+	</div>
+	<div class="panel-body">
+		<button class="btn btn-success" ng-click="editUser('new')" data-toggle="modal">New User</button>
+		<div>
+			<table class="table table-condensed table-bordered table-hover table-striped">
+				<thead>
+					<tr>
+					<th> id </th>
+					<th>first name</th>
+					<th>last name</th>
+					<th>email</th>
+					<th>age</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-class-even="'even'" ng-repeat="user in users">
+					<td>{{$index + 1}}</td>
+					<td><a href="/user/{{user._id}}">{{user.firstname}}</a></td>
+					<td>{{user.lastname}}</td>
+					<td>{{user.email}}</td>
+					<td>{{user.age}}</td>
+					<!-- 
+						<td><a class='btn btn-primary' ng-click='removeMileage(mileage, $index)' ng-class='{disabled: index < 0}'>Delete</a></td>
+					 -->
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="modal hide fade" ng-include="'user/detail.html'" id="editModal" role='dialog'></div>
+		
+	</div>
+</div>
