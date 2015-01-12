@@ -1,0 +1,6 @@
+
+
+property.type
+	1-family
+	2-student
+	3-professional
