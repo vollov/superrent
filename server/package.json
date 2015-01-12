@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
-
+		"test": "mocha --ui bdd -R spec $(find test -name '*.js')"
     },
 	"dependencies": {
         "body-parser": "~1.8.1",
