@@ -16,6 +16,7 @@
         "underscore":"1.7.0"
     },
     "devDependencies": {
+    	"supertest": ">= 0.3.x",
 		"should": "4.x"
     }
 }
