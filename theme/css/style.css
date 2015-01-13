@@ -38,6 +38,18 @@ body {
 .items {
 	margin: 10px 0px 10px 0px;	
 }
+.img-box {
+	margin-right: 10px;
+}
+
+.inline-space {
+	margin-right: 20px;
+}
+
+.property-textbox {
+	margin: 0px 10px 0px 10px;
+	border-left:1px solid #EEE;
+}
 
 .boder-right-splitter{
 	border-right:1px solid #EEE;
