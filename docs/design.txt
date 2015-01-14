@@ -1,0 +1,16 @@
+
+Front end design principles
+1. View logic should prepare data only for display and never modify the model.
+2. Controller logic should never directly create, update, or delete data from the model.
+3. The client should never directly access the data store.
+
+
+
+sprint 2 -- add a filter on the left of the property list
+========================================
+The search flter need to be carefully designed. The filter must be restful, meaning when select a city link or/and a rental type link, the url will be updated accrodingly. when type in an url, the filter must be updated accrodingly. e.g.
+
+click city link,  url= /listing/$city
+click type link, url=/listing/all/$type
+click city then click type, url=/listing/$city/$type
+click tye, url=/listing/all/$type, then click city url=/listing/$city/$type

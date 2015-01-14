@@ -10,4 +10,8 @@ angular.module('rental.configuration', [ ])
 		api_host: 'localhost',
 		api_port: '8800'
 	}
+}).factory('types', function() {
+	return {
+		property_type: {1:'family',2:'student',3:'professional'}
+	}
 });

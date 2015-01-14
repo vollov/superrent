@@ -31,6 +31,7 @@ CREATE TABLE property (
   latitude double,
   longitude double,
   start_price integer,
+  size_sqft int(8),
   active TINYINT(1),
   owner_id int(11) unsigned NOT NULL,
   PRIMARY KEY (id),
@@ -39,6 +40,7 @@ CREATE TABLE property (
 
 
 INSERT INTO property VALUES
-(1,'24 green valley DR','Kiechener','ON','N2P2J8',1,12,13,1400,1,1),
-(2,'284 purple sage CR','Kiechener','ON','N2E4G6',1,12,13,1450,0,1),
-(3,'73 amherst DR','Kiechener','ON','N2P1C9',2,12,13,550,0,1);
+(1,'24 green valley DR','Kitchener','ON','N2P2J8',1,12,13,1400,2000,1,1),
+(2,'284 purple sage CR','Kitchener','ON','N2E4G6',1,12,13,1450,1600,0,1),
+(3,'73 amherst DR','Kitchener','ON','N2P1C9',2,12,13,550,110,0,1),
+(4,'941 DALHOUSIE Drive','London','ON','N6K1M8',3,12,13,1400,2000,0,2);

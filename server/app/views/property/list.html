@@ -1,43 +1,32 @@
-
-<div class="row">
-
-
+<div class="row" ng-controller="PropertyListCtrl">
 	<div class="col-md-3">
-
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<h3 class="panel-title">Cities</h3>
 			</div>
 
 			<ul class="items">
-				<li><a href="/en/index.html">city Name</a></li>
-				<li><a href="/en/index.html">city Name ghdfd</a></li>
-				<li><a href="/en/index.html">city Name asdfasd</a></li>
+				<li ng-repeat="item in data.properties | unique:'city'">
+					<a ng-click="selectCity(item)">{{item}}</a>
+				</li>
 			</ul>
 
 		</div>
 
+<!-- 
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<h3 class="panel-title">Type</h3>
 			</div>
 			<div class="panel-body">
-				<form class="form-inline" role="form">
-					<div class="form-group col-xs-5">
-						<div class="input-group ">
-							<input type="text" class="form-control" id="lowerRagne"
-								placeholder="From">
-						</div>
-					</div>
-					<div class="form-group col-xs-5">
-						<div class="input-group ">
-							<input type="number" class="form-control" id="upperRange"
-								placeholder="To">
-						</div>
-					</div>
+				<form role="form">
+					<input ng-repeat="item in data.properties | unique:'type'" name="color" type="radio" ngChange="selectType(item)" value="{{item}}">{{item}}<br/>
+					<tt>color = {{color | json}}</tt><br/>
 				</form>
+				
 			</div>
 		</div>
+ | filter:filterPropertyByType -->
 	</div>
 
 	<div class="col-md-9 boder-left-splitter">
@@ -56,8 +45,8 @@
 				</h3>
 			</div>
 
-			<ul class="list-group" ng-controller="PropertyListCtrl">
-				<li class="list-group-item" ng-repeat="item in data.properties">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="item in data.properties | filter:filterPropertyByCity ">
 					<div class="img-box pull-left">
 						<img src="/images/284-120x90.jpg" class="img-responsive"
 							alt="ISDA Logo" />
@@ -71,7 +60,10 @@
 							<strong>Phone:</strong> {{item.phone}}<span class="inline-space"></span><strong>Email:</strong>
 							<a href="mailto:#">{{item.email}}</a>
 						</p>
-
+						<p class="list-group-item-text">
+							<strong>Type:</strong> {{getTypeText(item)}}
+						</p>
+						
 						<p class="list-group-item-text">Lovely House in a quiet area,
 							near to good malls, If you can't trust an SQL identifier
 							(database / table / column name) because it is provided by a
