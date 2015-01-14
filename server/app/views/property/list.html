@@ -1,44 +1,98 @@
-<div ng-controller="sportsStoreCtrl">
-	<div class="navbar navbar-inverse">
-		<a class="navbar-brand" href="#">SPORTS STORE</a>
-		<cart-summary />
-	</div>
 
-	<div class="alert alert-danger" ng-show="data.error">
-		Error ({{data.error.status}}). The product data was not loaded. <a
-			href="/sports/store.html" class="alert-link">Click here to try again</a>
-	</div>
+<div class="row">
 
-	<div class="panel panel-default row">
-		<div class="panel panel-default row" ng-controller="productListCtrl" ng-hide="data.error">
-			<div class="col-xs-3">
-				<a ng-click="selectCategory()"
-					class="btn btn-block btn-default btn-lg">Home</a> 
-				<a ng-repeat="item in data.products | orderBy:'category' | unique:'category'"
-					ng-click="selectCategory(item)"
-					class=" btn btn-block btn-default btn-lg"
-					ng-class="getCategoryClass(item)"> {{item}} </a>
+
+	<div class="col-md-3">
+
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">Cities</h3>
 			</div>
-			<div class="col-xs-8">
-				<div class="well" ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
-					<h3>
-						<strong>{{item.name}}</strong> <span
-							class="pull-right label label-primary"> {{item.price |
-							currency}} </span>
-					</h3>
-					<button ng-click="addProductToCart(item)"
-						class="btn btn-success pull-right">Add to cart
-					</button>
-					<span class="lead">{{item.description}}</span>
-				</div>
 
-				<div class="pull-right btn-group">
-					<a
-						ng-repeat="page in data.products | filter:categoryFilterFn | pageCount:pageSize"
-						ng-click="selectPage($index + 1)" class="btn btn-default"
-						ng-class="getPageClass($index + 1)"> {{$index + 1}} </a>
-				</div>
+			<ul class="items">
+				<li><a href="/en/index.html">city Name</a></li>
+				<li><a href="/en/index.html">city Name ghdfd</a></li>
+				<li><a href="/en/index.html">city Name asdfasd</a></li>
+			</ul>
+
+		</div>
+
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">Type</h3>
+			</div>
+			<div class="panel-body">
+				<form class="form-inline" role="form">
+					<div class="form-group col-xs-5">
+						<div class="input-group ">
+							<input type="text" class="form-control" id="lowerRagne"
+								placeholder="From">
+						</div>
+					</div>
+					<div class="form-group col-xs-5">
+						<div class="input-group ">
+							<input type="number" class="form-control" id="upperRange"
+								placeholder="To">
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
+
+	<div class="col-md-9 boder-left-splitter">
+
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel title
+					<div class="sort-list pull-right">
+						<ul>
+							<li><a href="/">Distance</a></li>
+							<li><a href="/web-design">Price</a></li>
+							<li><a href="/it-consulting">Post Date</a></li>
+						</ul>
+					</div>
+				</h3>
+			</div>
+
+			<ul class="list-group" ng-controller="PropertyListCtrl">
+				<li class="list-group-item" ng-repeat="item in data.properties">
+					<div class="img-box pull-left">
+						<img src="/images/284-120x90.jpg" class="img-responsive"
+							alt="ISDA Logo" />
+					</div>
+					<div>
+						<h4 class="list-group-item-heading">
+							{{item.street}}, {{item.city}}, {{item.province}} ({{item.start_price | currency}}/m) <span
+								class="label" ng-class="getStatusClass(item)">{{getStatusText(item)}}</span>
+						</h4>
+						<p class="list-group-item-text">
+							<strong>Phone:</strong> {{item.phone}}<span class="inline-space"></span><strong>Email:</strong>
+							<a href="mailto:#">{{item.email}}</a>
+						</p>
+
+						<p class="list-group-item-text">Lovely House in a quiet area,
+							near to good malls, If you can't trust an SQL identifier
+							(database / table / column name) because it is provided by a
+							user, you should escape it</p>
+					</div>
+				</li>
+			</ul>
+
+			<div class="sort-list pull-right">
+				<ul>
+					<li><a href="/"><</a></li>
+					<li><a href="/">12</a></li>
+					<li><a href="/web-design">13</a></li>
+					<li><a href="/it-consulting">14</a></li>
+					<li><a href="/">></a></li>
+				</ul>
+			</div>
+		</div>
+
+
+
+	</div>
 </div>
+<!-- row -->

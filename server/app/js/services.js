@@ -7,7 +7,7 @@
 angular.module('rental.configuration', [ ])
 .factory('settings', function() {
 	return {
-		api_host: '192.168.11.22',
+		api_host: 'localhost',
 		api_port: '8800'
 	}
 });

@@ -7,8 +7,22 @@ angular.module('rental.property',['rental.configuration'])
 	$scope.data = {};
 	
 	$http.get(propertyUrl).success(function(data) {
-		$scope.data.products = data;
+		$scope.data.properties = data;
 	}).error(function(error) {
 		$scope.data.error = error;
 	});
+	
+}])
+.controller("PropertyListCtrl", ['$scope', function ($scope) {
+
+	$scope.getStatusClass = function (item) {
+		//console.log(Buffer.isBuffer(item.status));
+		return item.status?  'label-success' : 'label-danger';
+	};
+	
+	$scope.getStatusText = function (item) {
+		//console.log(Buffer.isBuffer(item.status));
+		return item.status?  'Avaliable' : 'Rented';
+	};
+	
 }]);

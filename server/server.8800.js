@@ -12,6 +12,9 @@ var app = express();
 var Config = require('./lib/config');
 var config = Config().getProdConfig();
 
+var Midware = require('./lib/midware')
+var midware = Midware();
+
 app.config = config;
 
 // uncomment after placing your favicon in /public
@@ -22,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/app/')));
 
-//app.all('/api/*', midware.header);
+app.all('/api/*', midware.header);
 
 require('./api/property')(app);
 //require('./api/order')(app);

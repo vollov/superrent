@@ -12,12 +12,12 @@ module.exports = function(app) {
 		
 		db.connect(function(err, connection){
 //			connection.query( 'SELECT u.email,u.phone,p.street FROM user u, property p where p.owner_id = u.id', function(err, docs) {
-			connection.query( 'SELECT * FROM user u, property p where p.owner_id = u.id', function(err, docs) {
+			connection.query( 'SELECT *, p.active as status FROM user u, property p where p.owner_id = u.id', function(err, docs) {
 				connection.release();
 				
 				
 				if (!err) {
-					properties = util.removeFields(docs, ['password','latitude','longitude']);
+					properties = util.removeFields(docs, ['password','active','latitude','longitude']);
 					return res.send(properties);
 				} else {
 					return res.send(500, { message : err });
