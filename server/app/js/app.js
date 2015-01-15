@@ -10,6 +10,9 @@ angular.module('rentalApp',['ngRoute','ngResource',
 	}).when('/listing/:city',{
 		templateUrl : '/views/property/list.html',
 		controller : 'PropertyCtrl'
+	}).when('/property/:id',{
+		templateUrl : '/views/property/detail.html',
+		controller : 'PropertyDetailCtrl'
 	}).otherwise({
 		redirectTo : '/listing'
 	});

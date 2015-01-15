@@ -14,9 +14,13 @@ angular.module('rental.property.controllers',['rental.configuration'])
 	
 })
 .controller("PropertyListCtrl", function ($scope, $routeParams,$location, types, settings) {
-
+	$scope.orderProp = 'start_price';
 	$scope.selectedPage = 1;
 	$scope.pageSize = settings.page_size;
+	
+	$scope.sortProperties = function (field){
+		$scope.orderProp = field;
+	};
 	
 	$scope.getStatusClass = function (item) {
 		//console.log(Buffer.isBuffer(item.status));
@@ -74,4 +78,7 @@ angular.module('rental.property.controllers',['rental.configuration'])
 		return selectedCity == null ||
 		property.city == selectedCity;
 	}
+})
+.controller('PropertyDetailCtrl',function($scope, $routeParams) {
+    $scope.id = $routeParams.id;
 });
