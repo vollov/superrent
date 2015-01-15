@@ -8,7 +8,8 @@ angular.module('rental.configuration', [ ])
 .factory('settings', function() {
 	return {
 		api_host: 'localhost',
-		api_port: '8800'
+		api_port: '8800',
+		page_size: 2
 	}
 }).factory('types', function() {
 	return {
