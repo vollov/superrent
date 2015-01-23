@@ -3,6 +3,7 @@
 angular.module('rentalApp',['ngRoute','ngResource',
                           'rental.commonModule',
                           'rental.property.controllers',
+                          'rental.property.services',
                           'rental.property.filters']).config(function($routeProvider){
 	$routeProvider.when('/listing', {
 		templateUrl : '/views/property/list.html',

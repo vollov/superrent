@@ -79,6 +79,14 @@ angular.module('rental.property.controllers',['rental.configuration'])
 		property.city == selectedCity;
 	}
 })
-.controller('PropertyDetailCtrl',function($scope, $routeParams) {
+.controller('PropertyDetailCtrl',function($scope, $routeParams, Property) {
     $scope.id = $routeParams.id;
+    
+    $scope.p = Property.get({id : $routeParams.id},function(i) {
+	    $scope.mainImageUrl = p.images[0];
+	});
+    
+    $scope.setImage = function(imageUrl) {
+        $scope.mainImageUrl = imageUrl;
+    }
 });

@@ -77,3 +77,32 @@
 		</div>
 	</div>
 </div>
+
+
+==========
+
+<div class="row">
+	<div class="col-md-4">
+		<img src="images/boat-1.jpg" class="img-responsive" alt="ISDA Logo" />
+	</div>
+	<div class="col-md-4">
+		<img src="images/boat-1.jpg" class="img-responsive" alt="ISDA Logo" />
+	</div>
+	<div class="col-md-4">
+		<img src="images/boat-1.jpg" class="img-responsive" alt="ISDA Logo" />
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-md-4">
+		<img src="images/boat-1.jpg" class="img-responsive" alt="ISDA Logo" />
+	</div>
+	<div class="col-md-4">
+		<img src="images/boat-1.jpg" class="img-responsive" alt="ISDA Logo" />
+	</div>
+	<div class="col-md-4">
+		<img src="images/boat-1.jpg" class="img-responsive" alt="ISDA Logo" />
+	</div>
+</div>
+</div>
+</div>
