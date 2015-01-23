@@ -70,10 +70,10 @@ Error ({{data.error.status}}). The system data was not loaded.
 				<li class="list-group-item" ng-show="filtered.length == 0">
 					<h4 class="list-group-item-heading alert alert-danger">Data not avaliable for Ontario {{currentCity}} {{currentType}}.</h4>
 				</li>
-				<li class="list-group-item" ng-repeat="item in filtered = (data.properties | filter:filterPropertyByCity | filter:filterPropertyByType | orderBy:orderProp | range:selectedPage:pageSize)">
-					<div class="img-box pull-left">
-						<a href="#/property/{{item.id}}" class="thumb">
-							<img src="/images/284-120x90.jpg" class="img-responsive" alt="ISDA Logo" />
+				<li class="list-group-item ad-item" ng-repeat="item in filtered = (data.properties | filter:filterPropertyByCity | filter:filterPropertyByType | orderBy:orderProp | range:selectedPage:pageSize)">
+					<div class="img-box thumbnail pull-left">
+						<a href="#/property/{{item.id}}" class="">
+							<img src="/images/{{item.id}}/{{item.thumbnail}}" class="img-responsive thumb" alt="ISDA Logo" />
 						</a>
 					</div>
 					<div>

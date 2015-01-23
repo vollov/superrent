@@ -14,3 +14,8 @@ click city link,  url= /listing/$city
 click type link, url=/listing/all/$type
 click city then click type, url=/listing/$city/$type
 click tye, url=/listing/all/$type, then click city url=/listing/$city/$type
+
+
+a sample query
+
+

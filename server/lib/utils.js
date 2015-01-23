@@ -22,6 +22,12 @@ module.exports = function(){
 			return _.map(docs, function(item) {
 				return _.omit(item, keys);
 			});
+		},
+		
+		keepFields : function(docs, keys){
+			return _.map(docs, function(item) {
+				return _.pick(item, keys);
+			});
 		}
 	}
 }

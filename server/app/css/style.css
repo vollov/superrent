@@ -38,6 +38,19 @@ body {
 .items {
 	margin: 10px 0px 10px 0px;	
 }
+
+.thumb {
+  /*float: left;
+  margin: -0.5em 1em 1.5em 0;
+  padding-bottom: 1em;*/
+  height: 90px;
+  width: 120px;
+}
+
+.ad-item {
+	height: 121px;
+}
+
 .img-box {
 	margin-right: 10px;
 }

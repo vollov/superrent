@@ -10,3 +10,5 @@ mysql> \. schema.sql
 
 mysql> use rental_test;
 mysql> \. schema.sql
+
+
