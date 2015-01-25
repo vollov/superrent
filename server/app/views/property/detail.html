@@ -29,17 +29,17 @@
 	</table>
 </div>
 
-<div class="phone-images">
+<div>
   <img ng-src="/images/{{p.id}}/{{img.name}}"
        class="phone"
        ng-repeat="img in p.images"
        ng-class="{active: mainImageUrl==img.name}">
 </div>
 
-
+<!-- row
 <ul class="phone-thumbs">
   <li ng-repeat="img in p.images">
     <img ng-src="/images/{{p.id}}/{{img.name}}" ng-click="setImage(img.name)">
   </li>
 </ul>
-<!-- row -->
+ -->

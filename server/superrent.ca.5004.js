@@ -1,6 +1,6 @@
 var http = require('http');
 var express = require('express')
-	port = parseInt(process.env.PORT,10) || 8800;
+	port = parseInt(process.env.PORT,10) || 5004;
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
