@@ -42,7 +42,7 @@ module.exports = function(config) {
 			//
 			function(property, callback) {
 				// fetch property id from property
-				console.log('property => %j ', property[0].pid);
+				// console.log('property => %j ', property[0].pid);
 				var pid = property[0].pid;
 				
 				// query image table
@@ -51,20 +51,40 @@ module.exports = function(config) {
 						function(err, docs) {
 							connection.release();
 							if (err) {
-								console.log('err2 => %j ', err);
+								console.log('err image => %j ', err);
 							}
 							callback(err, docs, property);
 						})
 				});
 				
-			}], function(err, images, property) {
+			},
+			function(images, property, callback) {
+				// fetch property id from property
+				// console.log('property => %j ', property[0].pid);
+				var pid = property[0].pid;
+				
+				// query image table
+				db.connect(function(err, connection){
+					connection.query( "SELECT * FROM room r WHERE r.property_id = ? ", [pid],
+						function(err, docs) {
+							connection.release();
+							if (err) {
+								console.log('err room=> %j ', err);
+							}
+							callback(err, docs, images, property);
+						})
+				});
+				
+			}], 
+			function(err, rooms, images, property) {
 //				if (err) {
 //					throw err;
 //				}
 				var p = util.removeFields(property, ['password','active','latitude','longitude']);
 				var rimage = util.keepFields(images, ['name','title']);
-				
+				var rroom = util.removeFields(rooms, ['property_id']);
 				p[0].images = rimage;
+				p[0].rooms = rooms;
 				var result = p[0];
 //				if (!err) {
 //					console.log('property => %j ', property);

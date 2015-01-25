@@ -19,32 +19,27 @@
 				<td>Email</td>
 				<td>{{p.email}}</td>
 			</tr>
-			<tr>
-				<td>Room 1 (Standard)</td>
-				<td>$550</td>
-			</tr>
-			<tr>
-				<td>Room 2 (Superior)</td>
-				<td>$550</td>
-			</tr>
-			<tr>
-				<td>Room 3 (Double)</td>
-				<td>$560</td>
-			</tr>
-			<tr>
-				<td>Room 4 (Triple)</td>
-				<td>$570</td>
+			
+			
+			<tr ng-repeat="r in p.rooms">
+				<td>{{r.name}}</td>
+				<td>{{r.price | currency}}</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 
 <div class="phone-images">
-  <img ng-src="{{img}}"
+  <img ng-src="/images/{{p.id}}/{{img.name}}"
        class="phone"
-       ng-repeat="img in phone.images"
-       ng-class="{active: mainImageUrl==img}">
+       ng-repeat="img in p.images"
+       ng-class="{active: mainImageUrl==img.name}">
 </div>
 
 
+<ul class="phone-thumbs">
+  <li ng-repeat="img in p.images">
+    <img ng-src="/images/{{p.id}}/{{img.name}}" ng-click="setImage(img.name)">
+  </li>
+</ul>
 <!-- row -->

@@ -9,7 +9,7 @@ angular.module('rental.configuration', [ ])
 	return {
 		api_host: 'localhost',
 		api_port: '8800',
-		page_size: 2
+		page_size: 15
 	}
 }).factory('types', function() {
 	return {

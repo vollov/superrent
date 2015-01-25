@@ -61,7 +61,7 @@ require('./api/property')(app);
 //    });
 //});
 
-http.createServer(app).listen(port, function(){
+http.createServer(app).listen(port, '0.0.0.0', function(){
 	console.log('Now serving the app at localhost:' + port);
 });
 //module.exports = app;
