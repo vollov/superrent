@@ -82,8 +82,8 @@ angular.module('rental.property.controllers',['rental.configuration'])
 .controller('PropertyDetailCtrl',function($scope, $routeParams, Property) {
     $scope.id = $routeParams.id;
     
-    $scope.p = Property.get({id : $routeParams.id},function(p) {
-	    $scope.mainImageUrl = p.images[0].name;
+    $scope.p = Property.get({id : $routeParams.id},function(property) {
+	    $scope.mainImageUrl = property.images[0].name;
 	});
     
     $scope.setImage = function(imageUrl) {

@@ -55,7 +55,7 @@ Error ({{data.error.status}}). The system data was not loaded.
 					<select ng-model="orderProp">
 					  <option value="start_price">Price</option>
 					  <option value="created">Posted</option>
-					</select>
+					</select> 
 					 -->
 					<div class="sort-list pull-right">
 						<ul>
@@ -72,8 +72,8 @@ Error ({{data.error.status}}). The system data was not loaded.
 				</li>
 				<li class="list-group-item ad-item" ng-repeat="item in filtered = (data.properties | filter:filterPropertyByCity | filter:filterPropertyByType | orderBy:orderProp | range:selectedPage:pageSize)">
 					<div class="img-box thumbnail pull-left">
-						<a href="#/property/{{item.id}}" class="">
-							<img src="/images/{{item.id}}/{{item.thumbnail}}" class="img-responsive thumb" alt="ISDA Logo" />
+						<a href="#/property/{{item.id}}">
+							<img ng-src="images/{{item.id}}/{{item.thumbnail}}" class="img-responsive thumb" alt="ISDA Logo" />
 						</a>
 					</div>
 					<div>

@@ -8,6 +8,8 @@ angular.module('rentalApp',['ngRoute','ngResource',
 	$routeProvider.when('/listing', {
 		templateUrl : '/views/property/list.html',
 		controller : 'PropertyCtrl'
+	}).when('/about',{
+		templateUrl : '/views/about.html'
 	}).when('/listing/:city',{
 		templateUrl : '/views/property/list.html',
 		controller : 'PropertyCtrl'
