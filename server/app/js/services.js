@@ -7,8 +7,8 @@
 angular.module('rental.configuration', [ ])
 .factory('settings', function() {
 	return {
-		api_host: 'localhost',
-		api_port: '5004',
+		api_host: 'superrent.ca',
+		api_port: '80',
 		page_size: 15
 	}
 }).factory('types', function() {
